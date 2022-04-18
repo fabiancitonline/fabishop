@@ -1,0 +1,121 @@
+$colorPrimario: black;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body,
+#root {
+    height: 100vh;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-header {
+    background-color: $colorPrimario;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color : white;
+
+    > a  {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav {
+        > a {
+            text-decoration: none;
+            margin-left: 1rem;
+            color: inherit;
+        }
+    }
+}
+
+
+main {
+    flex-grow: 1;
+    padding: 1rem;
+}
+.carga {
+    text-align: center;
+}
+.product-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 1rem;
+
+    article{
+        text-align: center;
+        padding: 1rem;
+        background-color: #FFF;
+        border-radius: 3px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+
+        &:hover{
+            box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        img{
+            width: 100%;
+        }
+
+        h2{
+            margin-top: 1rem;
+            font-size: 1em;
+        }
+
+        p{
+            margin-top: 1rem;
+        }
+
+        button{
+            margin-top: 1rem;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;            
+            > a {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+            }
+        }
+    }
+}
+footer {
+    background-color: $colorPrimario;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.8em;
+    > a  {
+        color: white;
+        text-decoration: none;
+    }
+    nav{
+        > a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+        a:hover {
+            color: white;
+        }
+    }
+}
