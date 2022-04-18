@@ -2,7 +2,7 @@ import ItemList from './ItemList';
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
 import { toast } from 'react-toastify';
-
+import Loading from './Loading';
 
 const ItemListContainer = () => {
 
@@ -30,7 +30,7 @@ const ItemListContainer = () => {
 
     return (
         <> {loading &&
-            <p className='carga'>{loading ? <img src="loading.gif" alt="Loading"></img> : ''}</p>
+            <Loading></Loading>
           }
      {!loading &&
             <ItemList productos={productos}></ItemList>

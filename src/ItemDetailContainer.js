@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {toast} from 'react-toastify'
+import Loading from './Loading'
 const ItemDetailContainer = () => {
 
 const [item, setItem] = useState({})
@@ -26,14 +27,14 @@ useEffect(()=>{
 
   return (
       <> {loading &&
-     <p className='carga'>{loading ? <img src="loading.gif" alt="Loading"></img> : ''}</p>}
-{!loading &&
+        <Loading></Loading>}
+        {!loading &&
 <>
 <h2>{item.title}</h2>
-<p>{item.category}</p>
+<h3>Categoría: {item.category}</h3>
 <img src={item.image} width='200' height='300' alt=''/>
 <p>{item.description}</p>
-<p>Precio: ${item.price}</p>
+<h4>Precio: ${item.price}</h4>
 </>
 }
     </>
