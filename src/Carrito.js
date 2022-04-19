@@ -7,16 +7,16 @@ const Carrito = () => {
   
   const handleClick = () => {
   }
-  return (
+return (
     <>
 <h2>Carrito</h2>
 <hr></hr>
             {
                 carrito.map(producto => (
                     <div key={producto.id}>
-                        <p>{producto.title}</p>
+                        <h5>{producto.name}</h5>
                         <img src={producto.image} width='200' height='300' alt=''/>
-                        <p>{producto.price} x {producto.cant}</p>
+                        <p>Precio: ${producto.price} x {producto.cant} {producto.cant > 1 ? 'unidades' : 'unidad'}</p>
                         <button onClick={()=>borrarProducto(producto.id)}>Borrar</button>
                         <hr></hr>
 
