@@ -22,13 +22,11 @@ if (!id){
         const aux = []
 
         docs.forEach((doc) => {
-            console.log(doc.data())
             const item = {
                 id: doc.id,
                 ...doc.data()
             }
             aux.push(item)
-            console.log(aux)
             setProductos(aux)
         })
     })
@@ -38,7 +36,6 @@ if (!id){
         setLoading(false)
     })
 } else{
-    console.log(id)
     const coleccion = collection(db, 'productos')
 const filtro = query(coleccion, where("category", "==", id))
     const documentos = getDocs(filtro)
@@ -47,13 +44,11 @@ const filtro = query(coleccion, where("category", "==", id))
         const aux = []
 
         docs.forEach((doc) => {
-            console.log(doc.data())
             const item = {
                 id: doc.id,
                 ...doc.data()
             }
             aux.push(item)
-            console.log(aux)
             setProductos(aux)
         })
     })

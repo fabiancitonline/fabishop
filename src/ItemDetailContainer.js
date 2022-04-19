@@ -16,7 +16,6 @@ const ItemDetailContainer = () => {
         setLoading(true)
         const coleccion = collection(db, 'productos')
         const documento = getDoc(doc(coleccion,id))
-        console.log(documento)
         documento
             .then((doc) => {
                 const item = {
@@ -30,20 +29,6 @@ const ItemDetailContainer = () => {
             }).finally(() => {
                 setLoading(false)
             })
-        // const pedido = fetch(`https://fakestoreapi.com/products/${id}`)
-        // pedido.then((respuestaApi) => {
-        //     return respuestaApi.json()
-        // })
-        //     .then((dato) => {
-        //         setItem(dato)
-        //     }
-
-        //     ).catch((errorApi) => {
-        //         toast.error('Error al cargar los productos')
-        //     }
-        //     ).finally(() => {
-        //         setLoading(false)
-        //     })
     }, [id])
     return (
         <div> {loading &&
