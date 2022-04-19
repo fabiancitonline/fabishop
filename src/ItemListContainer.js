@@ -59,20 +59,6 @@ const filtro = query(coleccion, where("category", "==", id))
     })
 }
 }, [id])
-  
-        // const prods = fetch(id ? `https://fakestoreapi.com/products/category/${id}` : 'https://fakestoreapi.com/products')
-        // prods.then((respuestaApi) => {
-        //     return respuestaApi.json()
-        // })
-        //     .then((datos) => {
-        //         setProductos(datos)
-        //     }
-
-        //     ).catch((errorApi) => {
-        //         toast.error('Error al cargar los productos')
-        //     }
-            
-
     return (
         <> {loading &&
             <Loading></Loading>
