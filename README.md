@@ -14,5 +14,6 @@ Ecommerse made with React using Firebase.
 
 [Production deploy](https://fabishop.netlify.app/)
 
-DEMO:
+## DEMO:
+
 ![fabishop](https://user-images.githubusercontent.com/65763957/164126698-e41cc18b-d5f4-40a3-a7b2-000d257a9e2f.gif)
