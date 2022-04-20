@@ -35,10 +35,12 @@ const MiProvider = ({ children }) => {
         setTotal(total + item.price * cant)
         setCantidadActual(cantidadActual + cant)
     }
-    const limpiarProductos = () => {
-        toast.info('Vaciaste el carrito')
+    const limpiarProductos = (confirmacion) => {
         setCarrito([]);
         setTotal(0);
+        if(confirmacion){
+            toast.success('Carrito vaciado con exito')
+        }
     }
     const existe = (id) => {
         return carrito && carrito.some(item => item.id === id)
