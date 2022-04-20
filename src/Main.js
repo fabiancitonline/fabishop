@@ -3,7 +3,7 @@ import { Routes,  Route} from "react-router-dom";
 
 import Carrito from './Carrito'
 import ItemDetailContainer from './ItemDetailContainer';
-const Main = (props) => {
+const Main = () => {
     return (
         <main className='container'>
 <Routes>

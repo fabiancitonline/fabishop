@@ -10,7 +10,7 @@ function App() {
         <MiProvider>
             <BrowserRouter>
                 <Header />
-                <Main nombre='Fabi' apellido='Bariandaran' />
+                <Main/>
                 <Footer />
                 <ToastContainer></ToastContainer>
             </BrowserRouter>

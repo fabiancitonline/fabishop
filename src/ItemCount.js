@@ -1,11 +1,8 @@
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 import { toast } from 'react-toastify'
-import { context } from './CartContext'
 
 const ItemCount = ({ cant, inicial, onAdd }) => {
     const [counter, setCounter] = useState(inicial)
-
-    const resultado = useContext(context)
 
     const sumar = (e) => {
         if (counter >= cant) {
